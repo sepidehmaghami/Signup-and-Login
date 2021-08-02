@@ -1,0 +1,189 @@
+body {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #c4c3ca;
+    background-color: #34374c;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+}
+
+h3 span {
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkbox:checked+label,
+.checkbox:not(:checked)+label {
+    position: relative;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 8px;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: #ffeba7;
+}
+
+.checkbox:checked+label:before,
+.checkbox:not(:checked)+label:before {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffeba7;
+    background-color: #102770;
+    font-family: 'unicons';
+    content: '\eb4f';
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    transition: 0.5s ease;
+}
+
+.checkbox:checked+label:before {
+    transform: translateX(44px) rotate(-280deg);
+}
+
+.checkbox:checked~.card-wrap .card-wrapper {
+    transform: rotateY(180deg);
+}
+
+.card-wrap {
+    width: 440px;
+    height: 460px;
+    perspective: 800px;
+    margin-top: 60px;
+}
+
+.card-wrapper {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 600ms;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link {
+    color: #a2a2c4;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.link:hover {
+    color: #ffeba7;
+}
+
+p {
+    font-size: 17px;
+}
+
+.card-front,
+.center-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2b38;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+    background-position: bottom center;
+    background-size: 300%;
+    position: absolute;
+    border-radius: 6px;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+}
+
+.center-wrap {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 43%;
+    transform: translate3d(0, -50%, 35px);
+}
+
+.form-group {
+    position: relative;
+    width: 80%;
+}
+
+.form-style {
+    padding: 10px 0px;
+    padding-left: 70px;
+    margin: 10px 0px;
+    height: 30px;
+    width: 80%;
+    border-radius: 4px;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+.form-style:focus,
+.form-style:active {
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+.input-icon {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 48px;
+    font-size: 19px;
+    line-height: 48px;
+    text-align: left;
+    color: #ffeba7;
+}
+
+.btn {
+    align-self: center;
+    width: 80%;
+    margin: 15px 0px;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 10px 0px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #ffeba7;
+    color: #102770;
+    box-shadow: 0 8px 24px 0 rgba(255, 235, 167, .2);
+}
+
+.btn:focus,
+.btn:hover {
+    background-color: #102770;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
+}
